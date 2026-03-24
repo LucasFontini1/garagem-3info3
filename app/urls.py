@@ -13,9 +13,11 @@ from rest_framework_simplejwt.views import (
 )
 
 from core.views import UserRegistrationView, UserViewSet
+from core.views.acessorio import AcessorioViewSet
 
 router = DefaultRouter()
 
+router.register(r'acessorios', AcessorioViewSet, basename='acessorios')
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 
 urlpatterns = [
